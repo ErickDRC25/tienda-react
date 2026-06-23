@@ -1,10 +1,10 @@
-import { useState,useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { useNavigate, Link  } from 'react-router-dom'
 
 function Login() {
-    
+
     const navigate = useNavigate()
-    
+
     const [correo, setCorreo] = useState("")
     const [password, setPassword] = useState("")
     const url = import.meta.env.VITE_API_URL
@@ -68,6 +68,10 @@ function Login() {
                 >
                     Acceder
                 </button>
+
+                <p className="text-center text-sm">
+                    ¿No tienes cuenta? <Link to="/registro" className="text-blue-500 hover:underline">Regístrate</Link>
+                </p>
             </div>
         </div>
     )
